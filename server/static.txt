@@ -1,0 +1,951 @@
+commit notification 25f0f00a9b4acb3f0f2b0d6de79fd246151c76b4
+Building remotely on slave-build-1-2 in workspace /opt/jenkins/workspace/FED/fed.mobile
+Wiping out workspace first.
+Cloning the remote Git repository
+Cloning repository http://git.overstock.com/scm/mobweb/mobile-website.git
+ > git init /opt/jenkins/workspace/FED/fed.mobile # timeout=10
+Fetching upstream changes from http://git.overstock.com/scm/mobweb/mobile-website.git
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username tabuildserver # timeout=10
+ > git config --local credential.helper store --file=/tmp/git3975442376051386940.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress http://git.overstock.com/scm/mobweb/mobile-website.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git config remote.origin.url http://git.overstock.com/scm/mobweb/mobile-website.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url http://git.overstock.com/scm/mobweb/mobile-website.git # timeout=10
+Fetching upstream changes from http://git.overstock.com/scm/mobweb/mobile-website.git
+using .gitcredentials to set credentials
+ > git config --local credential.username tabuildserver # timeout=10
+ > git config --local credential.helper store --file=/tmp/git4303313389710451569.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress http://git.overstock.com/scm/mobweb/mobile-website.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse 25f0f00a9b4acb3f0f2b0d6de79fd246151c76b4^{commit} # timeout=10
+ > git branch -a -v --no-abbrev --contains 25f0f00a9b4acb3f0f2b0d6de79fd246151c76b4 # timeout=10
+Checking out Revision 25f0f00a9b4acb3f0f2b0d6de79fd246151c76b4 (origin/develop)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 25f0f00a9b4acb3f0f2b0d6de79fd246151c76b4
+ > git rev-list 3ed5b2f1206d47f03de3e8a4def5b3fbd3954d43 # timeout=10
+Failed to notify Stash for commit 25f0f00a9b4acb3f0f2b0d6de79fd246151c76b4 ({"errors":[{"context":null,"message":"You are not permitted to access this resource","exceptionName":"com.atlassian.stash.exception.AuthorisationException"}]})
+[fed.mobile] $ /bin/sh -xe /tmp/hudson8646497999841207714.sh
++ env
+BUILD_URL=https://jenkins.overstock.com/jenkins/job/FED/job/fed.mobile/339/
+HUDSON_SERVER_COOKIE=5657b67ff5451582
+SHELL=/bin/bash
+DESKTOP_DB_ENABLED=true
+SSH_CLIENT=10.4.9.60 35166 22
+BUILD_TAG=jenkins-FED-fed.mobile-339
+GIT_PREVIOUS_COMMIT=3ed5b2f1206d47f03de3e8a4def5b3fbd3954d43
+WORKSPACE=/opt/jenkins/workspace/FED/fed.mobile
+JOB_URL=https://jenkins.overstock.com/jenkins/job/FED/job/fed.mobile/
+USER=jenkins
+NLSPATH=/usr/dt/lib/nls/msg/%L/%N.cat
+GIT_COMMIT=25f0f00a9b4acb3f0f2b0d6de79fd246151c76b4
+JENKINS_HOME=/opt/jenkins
+PATH=/opt/jdk7/bin:/opt/jdk7/bin:/usr/local/bin:/bin:/usr/bin
+MAIL=/var/mail/jenkins
+_=/bin/env
+PWD=/m2repos/workspaces/FED/fed.mobile
+JAVA_HOME=/opt/jdk7
+HUDSON_URL=https://jenkins.overstock.com/jenkins/
+JOB_NAME=FED/fed.mobile
+BUILD_DISPLAY_NAME=#339
+XFILESEARCHPATH=/usr/dt/app-defaults/%L/Dt
+JENKINS_URL=https://jenkins.overstock.com/jenkins/
+BUILD_ID=339
+GIT_PREVIOUS_SUCCESSFUL_COMMIT=3ed5b2f1206d47f03de3e8a4def5b3fbd3954d43
+HOME=/opt/jenkins
+SHLVL=2
+GIT_BRANCH=origin/develop
+Branch=Auto
+JENKINS_SERVER_COOKIE=5657b67ff5451582
+EXECUTOR_NUMBER=3
+GIT_URL=http://git.overstock.com/scm/mobweb/mobile-website.git
+NODE_LABELS=slave-build-1-2
+LOGNAME=jenkins
+DESKTOP_DB_HUDSON_PROVIDER_HOST=http://desktopdb.build.overstock.com/
+HUDSON_HOME=/opt/jenkins
+SSH_CONNECTION=10.4.9.60 35166 10.4.9.68 22
+NODE_NAME=slave-build-1-2
+BUILD_NUMBER=339
+HUDSON_COOKIE=c2508066-3fb0-4e71-82ed-939272b56041
++ ./jenkins.sh
+Branch parameter: Auto
+Git plugin param: origin/develop
+Branch to build: develop
+Switched to a new branch 'develop'
+Branch develop set up to track remote branch develop from origin.
+/m2repos/workspaces/FED/fed.mobile/.npm/bin/npm -> /m2repos/workspaces/FED/fed.mobile/.npm/lib/node_modules/npm/bin/npm-cli.js
+npm@2.0.0 /m2repos/workspaces/FED/fed.mobile/.npm/lib/node_modules/npm
+npm WARN deprecated lodash@2.4.2: lodash@<3.0.0 is no longer maintained. Upgrade to lodash@^4.0.0
+/m2repos/workspaces/FED/fed.mobile/.npm/bin/grunt -> /m2repos/workspaces/FED/fed.mobile/.npm/lib/node_modules/grunt-cli/bin/grunt
+grunt-cli@0.1.13 /m2repos/workspaces/FED/fed.mobile/.npm/lib/node_modules/grunt-cli
+��������� resolve@0.3.1
+��������� nopt@1.0.10 (abbrev@1.0.7)
+��������� findup-sync@0.1.3 (lodash@2.4.2, glob@3.2.11)
+
+> mws-app@2.4.22 preinstall /m2repos/workspaces/FED/fed.mobile
+> npm install napa@"^1.2.0"
+
+npm WARN deprecated graceful-fs@3.0.8: graceful-fs version 3 and before will fail on newer node releases. Please update to graceful-fs@^4.0.0 as soon as possible.
+npm WARN deprecated lodash@1.0.2: lodash@<3.0.0 is no longer maintained. Upgrade to lodash@^4.0.0.
+npm WARN deprecated graceful-fs@1.2.3: graceful-fs version 3 and before will fail on newer node releases. Please update to graceful-fs@^4.0.0 as soon as possible.
+napa@1.2.0 node_modules/napa
+��������� npm-cache-filename@1.0.2
+��������� rimraf@2.2.8
+��������� npmlog@0.1.1 (ansi@0.3.1)
+��������� mkdirp@0.5.1 (minimist@0.0.8)
+��������� tar-pack@2.0.1 (once@1.1.1, uid-number@0.0.3, debug@0.7.4, graceful-fs@4.1.3, readable-stream@1.0.33, fstream@0.1.31, fstream-ignore@0.0.7, tar@0.1.20)
+��������� download@3.2.0 (get-stdin@3.0.2, gulp-rename@1.2.2, each-async@1.1.1, url-regex@2.1.3, stream-combiner@0.2.2, vinyl@0.4.6, ware@1.3.0, rc@0.5.5, meow@2.1.0, concat-stream@1.5.1, decompress-unzip@2.1.2, through2@0.6.5, decompress-tarbz2@2.0.2, download-status@2.2.1, decompress-targz@2.1.0, decompress-tar@2.0.2, vinyl-fs@0.3.14, request@2.69.0)
+npm WARN deprecated lodash@2.4.2: lodash@<3.0.0 is no longer maintained. Upgrade to lodash@^4.0.0
+
+> npm-zepto@1.1.27 install /m2repos/workspaces/FED/fed.mobile/node_modules/npm-zepto
+> script/build
+
+zepto@1.1.9 node_modules/zepto
+coffee-script@1.5.0 node_modules/coffee-script
+
+shelljs@0.1.4 node_modules/shelljs
+
+uglify-js@2.4.24 node_modules/uglify-js
+��������� uglify-to-browserify@1.0.2
+��������� async@0.2.10
+��������� yargs@3.5.4 (camelcase@1.2.1, window-size@0.1.0, wordwrap@0.0.2, decamelize@1.1.2)
+��������� source-map@0.1.34 (amdefine@1.0.0)
+
+express@3.1.2 node_modules/express
+��������� methods@0.0.1
+��������� fresh@0.1.0
+��������� cookie-signature@1.0.0
+��������� range-parser@0.0.4
+��������� buffer-crc32@0.2.5
+��������� cookie@0.0.5
+��������� commander@0.6.1
+��������� mkdirp@0.3.5
+��������� send@0.1.0 (mime@1.2.6)
+��������� debug@2.2.0 (ms@0.7.1)
+��������� connect@2.7.5 (bytes@0.2.0, buffer-crc32@0.1.1, pause@0.0.1, qs@0.5.1, formidable@1.0.11)
+
+> zepto@1.1.9 dist /m2repos/workspaces/FED/fed.mobile/node_modules/npm-zepto/node_modules/zepto
+> coffee make dist
+
+dist/zepto.js: 55.4 KiB
+dist/zepto.min.js: 25.1 KiB
+dist/zepto.min.gz: 9.3 KiB
+compression factor: 5.9
+npm WARN deprecated has-color@0.1.7: Renamed to supports-color. If you're using chalk, upgrade to the latest version. https://github.com/chalk/supports-color
+npm WARN deprecated lodash@0.9.2: Grunt needs your help! See https://github.com/gruntjs/grunt/issues/1403.
+npm WARN deprecated lodash@1.0.2: lodash@<3.0.0 is no longer maintained. Upgrade to lodash@^4.0.0.
+npm WARN deprecated graceful-fs@1.2.3: graceful-fs version 3 and before will fail on newer node releases. Please update to graceful-fs@^4.0.0 as soon as possible.
+npm WARN optional dep failed, continuing fsevents@1.0.7
+npm WARN deprecated graceful-fs@2.0.3: graceful-fs version 3 and before will fail on newer node releases. Please update to graceful-fs@^4.0.0 as soon as possible.
+
+> contextify@0.1.15 install /m2repos/workspaces/FED/fed.mobile/node_modules/jsdom/node_modules/contextify
+> node-gyp rebuild
+
+child_process: customFds option is deprecated, use stdio instead.
+make: Entering directory `/m2repos/workspaces/FED/fed.mobile/node_modules/jsdom/node_modules/contextify/build'
+  CXX(target) Release/obj.target/contextify/src/contextify.o
+  SOLINK_MODULE(target) Release/obj.target/contextify.node
+  SOLINK_MODULE(target) Release/obj.target/contextify.node: Finished
+  COPY Release/contextify.node
+make: Leaving directory `/m2repos/workspaces/FED/fed.mobile/node_modules/jsdom/node_modules/contextify/build'
+npm WARN deprecated graceful-fs@3.0.8: graceful-fs version 3 and before will fail on newer node releases. Please update to graceful-fs@^4.0.0 as soon as possible.
+npm WARN deprecated graceful-fs@1.1.14: graceful-fs version 3 and before will fail on newer node releases. Please update to graceful-fs@^4.0.0 as soon as possible.
+npm WARN deprecated npmconf@2.1.1: this package has been reintegrated into npm and is now out of date with respect to npm
+
+> phantomjs@1.9.19 install /m2repos/workspaces/FED/fed.mobile/node_modules/grunt-selenium-webdriver/node_modules/phantomjs
+> node install.js
+
+Looks like an `npm install -g`; unable to check for already installed version.
+Download already available at /tmp/phantomjs/phantomjs-1.9.8-linux-x86_64.tar.bz2
+Verified checksum of previously downloaded file
+Extracting tar contents (via spawned process)
+Removing /m2repos/workspaces/FED/fed.mobile/node_modules/grunt-selenium-webdriver/node_modules/phantomjs/lib/phantom
+Copying extracted folder /tmp/phantomjs/phantomjs-1.9.8-linux-x86_64.tar.bz2-extract-1455828210197/phantomjs-1.9.8-linux-x86_64 -> /m2repos/workspaces/FED/fed.mobile/node_modules/grunt-selenium-webdriver/node_modules/phantomjs/lib/phantom
+Writing location.js file
+Done. Phantomjs binary available at /m2repos/workspaces/FED/fed.mobile/node_modules/grunt-selenium-webdriver/node_modules/phantomjs/lib/phantom/bin/phantomjs
+
+> mws-app@2.4.22 install /m2repos/workspaces/FED/fed.mobile
+> napa
+
+info git git://github.com/suprMax/ZeptoScroll into zeptoscroll
+zepto-extras@1.0.0 node_modules/zepto-extras
+
+overstock-mws-header@3.0.1 node_modules/overstock-mws-header
+
+md5-file@1.1.10 node_modules/md5-file
+
+array-to-sentence@1.0.4 node_modules/array-to-sentence
+
+zepto.dotdotdot@1.5.6 node_modules/zepto.dotdotdot
+
+deep-get-set@0.1.1 node_modules/deep-get-set
+
+backbone-extend-standalone@0.1.2 node_modules/backbone-extend-standalone
+
+grunt-contrib-copy@0.5.0 node_modules/grunt-contrib-copy
+
+ucfirst@0.0.1 node_modules/ucfirst
+
+sinon-chai@2.8.0 node_modules/sinon-chai
+
+scrollfix@0.0.2 node_modules/scrollfix
+
+Zepto-Cookie@1.0.0 node_modules/Zepto-Cookie
+
+deep-extend@0.3.3 node_modules/deep-extend
+
+camelize@1.0.0 node_modules/camelize
+
+localStorage@1.0.3 node_modules/localStorage
+
+chai-as-promised@4.3.0 node_modules/chai-as-promised
+
+grunt-mocha-istanbul@2.4.0 node_modules/grunt-mocha-istanbul
+
+overstock-mws-styleguide@3.0.6 node_modules/overstock-mws-styleguide
+
+fastclick@1.0.6 node_modules/fastclick
+
+grunt-exec@0.4.6 node_modules/grunt-exec
+
+trim-character@2.0.1 node_modules/trim-character
+��������� escape-string-regexp@1.0.4
+
+grunt-json-massager@0.1.0 node_modules/grunt-json-massager
+
+is-there@2.0.0 node_modules/is-there
+
+underscore@1.6.0 node_modules/underscore
+
+grunt-clear@0.2.1 node_modules/grunt-clear
+
+mocha-clean@0.4.0 node_modules/mocha-clean
+
+grunt-strip-code@0.1.2 node_modules/grunt-strip-code
+
+jquery.cssAnimateAuto@0.3.3 node_modules/jquery.cssAnimateAuto
+
+grunt-contrib-clean@0.6.0 node_modules/grunt-contrib-clean
+��������� rimraf@2.2.8
+
+file-match@1.0.2 node_modules/file-match
+��������� utils-extend@1.0.8
+
+q@1.4.1 node_modules/q
+
+semver@5.1.0 node_modules/semver
+
+time-grunt@0.3.2 node_modules/time-grunt
+��������� date-time@0.1.1
+��������� pretty-ms@0.1.0
+��������� text-table@0.2.0
+��������� chalk@0.4.0 (has-color@0.1.7, ansi-styles@1.0.0, strip-ansi@0.1.1)
+��������� hooker@0.2.3
+
+backbone@1.1.2 node_modules/backbone
+
+grunt-regex-replace@0.2.7 node_modules/grunt-regex-replace
+
+grunt-contrib-handlebars@0.8.0 node_modules/grunt-contrib-handlebars
+��������� chalk@0.4.0 (has-color@0.1.7, ansi-styles@1.0.0, strip-ansi@0.1.1)
+��������� grunt-lib-contrib@0.5.3 (zlib-browserify@0.0.1)
+
+grunt-contrib-concat@0.4.0 node_modules/grunt-contrib-concat
+��������� chalk@0.4.0 (has-color@0.1.7, ansi-styles@1.0.0, strip-ansi@0.1.1)
+
+hbsfy@2.5.0 node_modules/hbsfy
+��������� xtend@3.0.0
+��������� through@2.3.8
+
+backbone.radio@0.9.1 node_modules/backbone.radio
+
+grunt-remove-usestrict@0.1.1 node_modules/grunt-remove-usestrict
+��������� chalk@0.5.1 (ansi-styles@1.1.0, supports-color@0.2.0, escape-string-regexp@1.0.4, has-ansi@0.1.0, strip-ansi@0.3.0)
+
+glob@5.0.15 node_modules/glob
+��������� path-is-absolute@1.0.0
+��������� inherits@2.0.1
+��������� once@1.3.3 (wrappy@1.0.1)
+��������� inflight@1.0.4 (wrappy@1.0.1)
+��������� minimatch@3.0.0 (brace-expansion@1.1.3)
+
+backbone-tree-model@1.0.0 node_modules/backbone-tree-model
+
+npm-zepto@1.1.27 node_modules/npm-zepto
+
+grunt-git@0.3.7 node_modules/grunt-git
+��������� flopmang@0.0.1 (underscore.string@2.4.0)
+
+proxyquire@1.7.4 node_modules/proxyquire
+��������� module-not-found-error@1.0.1
+��������� fill-keys@1.0.2 (merge-descriptors@1.0.1, is-object@1.0.1)
+
+spin.js@2.3.2 node_modules/spin.js
+
+backbone.wreqr@1.3.5 node_modules/backbone.wreqr
+
+backbone.babysitter@0.1.10 node_modules/backbone.babysitter
+
+backbone.routefilter@0.2.1 node_modules/backbone.routefilter
+
+grunt-contrib-cssmin@0.9.0 node_modules/grunt-contrib-cssmin
+��������� chalk@0.4.0 (has-color@0.1.7, ansi-styles@1.0.0, strip-ansi@0.1.1)
+��������� clean-css@2.1.8 (commander@2.1.0)
+��������� maxmin@0.1.0 (pretty-bytes@0.1.2, gzip-size@0.1.1)
+
+backbone.marionette@2.4.4 node_modules/backbone.marionette
+
+grunt-mocha-test@0.12.7 node_modules/grunt-mocha-test
+��������� mkdirp@0.5.1 (minimist@0.0.8)
+��������� hooker@0.2.3
+
+dateformat@1.0.12 node_modules/dateformat
+��������� get-stdin@4.0.1
+��������� meow@3.7.0 (trim-newlines@1.0.0, map-obj@1.0.1, object-assign@4.0.1, camelcase-keys@2.0.0, decamelize@1.1.2, minimist@1.2.0, loud-rejection@1.3.0, redent@1.0.0, read-pkg-up@1.0.1, normalize-package-data@2.3.5)
+
+chai@1.10.0 node_modules/chai
+��������� assertion-error@1.0.0
+��������� deep-eql@0.1.3 (type-detect@0.1.1)
+
+grunt-este-watch@0.1.18 node_modules/grunt-este-watch
+��������� semver@3.0.1
+��������� tiny-lr-fork@0.0.5 (debug@0.7.4, faye-websocket@0.4.4, noptify@0.0.3, qs@0.5.6)
+
+matchdep@0.3.0 node_modules/matchdep
+��������� stack-trace@0.0.7
+��������� resolve@0.5.1
+��������� findup-sync@0.1.3 (glob@3.2.11)
+��������� globule@0.1.0 (minimatch@0.2.14, glob@3.1.21, lodash@1.0.2)
+
+less-plugin-npm-import@2.1.0 node_modules/less-plugin-npm-import
+��������� promise@7.0.4 (asap@2.0.3)
+��������� resolve@1.1.7
+
+chai-jq@0.0.7 node_modules/chai-jq
+
+lodash@2.4.2 node_modules/lodash
+
+photoswipe@4.1.1 node_modules/photoswipe
+
+backbone-validation@0.9.2 node_modules/backbone-validation
+
+mocha@1.21.5 node_modules/mocha
+��������� escape-string-regexp@1.0.2
+��������� diff@1.0.8
+��������� growl@1.8.1
+��������� commander@2.3.0
+��������� debug@2.0.0 (ms@0.6.2)
+��������� mkdirp@0.5.0 (minimist@0.0.8)
+��������� glob@3.2.3 (graceful-fs@2.0.3, inherits@2.0.1, minimatch@0.2.14)
+��������� jade@0.26.3 (commander@0.6.1, mkdirp@0.3.0)
+
+unwrap@0.1.0 node_modules/unwrap
+��������� uglify-js@2.4.24 (uglify-to-browserify@1.0.2, async@0.2.10, yargs@3.5.4, source-map@0.1.34)
+
+jquery@2.2.0 node_modules/jquery
+
+jira@0.8.2 node_modules/jira
+��������� request@2.14.0
+
+grunt-contrib-watch@0.6.1 node_modules/grunt-contrib-watch
+��������� async@0.2.10
+��������� tiny-lr-fork@0.0.5 (debug@0.7.4, faye-websocket@0.4.4, noptify@0.0.3, qs@0.5.6)
+��������� gaze@0.5.2 (globule@0.1.0)
+
+grunt-overstock-web-control-publish@0.1.8 node_modules/grunt-overstock-web-control-publish
+��������� md5-file@2.0.4
+��������� git-rev@0.2.1
+��������� async@1.5.2
+��������� overstock-node-web-control@0.0.15 (merge@1.2.0, overstock-node-service-cache-refresh@0.0.5, tough-cookie@2.2.1, seq@0.3.5, request@2.69.0)
+
+jaguarjs-jsdoc@0.0.1 node_modules/jaguarjs-jsdoc
+
+grunt-svgmin@2.0.1 node_modules/grunt-svgmin
+��������� log-symbols@1.0.2
+��������� each-async@1.1.1 (set-immediate-shim@1.0.1, onetime@1.1.0)
+��������� chalk@1.1.1 (supports-color@2.0.0, ansi-styles@2.1.0, has-ansi@2.0.0, escape-string-regexp@1.0.4, strip-ansi@3.0.0)
+��������� pretty-bytes@1.0.4 (get-stdin@4.0.1, meow@3.7.0)
+��������� svgo@0.5.6 (whet.extend@0.9.9, sax@1.1.5, colors@1.1.2, coa@1.0.1, mkdirp@0.5.1, js-yaml@3.3.1)
+
+requireify@0.2.1 node_modules/requireify
+��������� innersource@0.0.2
+��������� through@2.2.7
+��������� combine-source-map@0.2.0 (convert-source-map@0.2.6, source-map@0.1.43)
+��������� inline-source-map@0.2.5 (source-map@0.1.43)
+��������� detective@2.2.0 (escodegen@0.0.15, esprima@1.0.2)
+
+grunt-compile-handlebars@2.0.1 node_modules/grunt-compile-handlebars
+��������� lodash.toarray@3.0.2 (lodash._arraycopy@3.0.0, lodash._basevalues@3.0.0, lodash.keys@3.1.2)
+��������� lodash.merge@3.3.2 (lodash._arrayeach@3.0.0, lodash._getnative@3.9.1, lodash.keysin@3.0.8, lodash.istypedarray@3.0.5, lodash.isarray@3.0.4, lodash.isarguments@3.0.7, lodash._arraycopy@3.0.0, lodash.keys@3.1.2, lodash.toplainobject@3.0.0, lodash.isplainobject@3.2.0, lodash._createassigner@3.1.1)
+��������� alce@1.2.0 (estraverse@1.9.3, esprima@1.2.5)
+
+minami@1.1.1 node_modules/minami
+
+grunt-contrib-htmlmin@0.4.0 node_modules/grunt-contrib-htmlmin
+��������� chalk@0.5.1 (ansi-styles@1.1.0, escape-string-regexp@1.0.4, supports-color@0.2.0, has-ansi@0.1.0, strip-ansi@0.3.0)
+��������� pretty-bytes@1.0.4 (get-stdin@4.0.1, meow@3.7.0)
+��������� html-minifier@0.7.2 (relateurl@0.2.6, change-case@2.3.1, concat-stream@1.4.10, cli@0.6.6, clean-css@3.1.9, uglify-js@2.4.24)
+
+grunt-cucumberjs@0.7.3 node_modules/grunt-cucumberjs
+��������� commondir@0.0.2
+��������� underscore@1.5.2
+��������� js-base64@2.1.9
+��������� handlebars@1.0.12 (optimist@0.3.7, uglify-js@2.3.6)
+
+grunt-contrib-uglify@0.4.1 node_modules/grunt-contrib-uglify
+��������� chalk@0.4.0 (has-color@0.1.7, ansi-styles@1.0.0, strip-ansi@0.1.1)
+��������� maxmin@0.1.0 (pretty-bytes@0.1.2, gzip-size@0.1.1)
+��������� uglify-js@2.6.1 (uglify-to-browserify@1.0.2, async@0.2.10, yargs@3.10.0, source-map@0.5.3)
+
+handlebars@1.3.0 node_modules/handlebars
+��������� optimist@0.3.7 (wordwrap@0.0.3)
+��������� uglify-js@2.3.6 (async@0.2.10, source-map@0.1.43)
+
+grunt-notify@0.3.1 node_modules/grunt-notify
+��������� stack-parser@0.0.1
+��������� which@1.0.9
+��������� semver@3.0.1
+
+grunt-jira@0.2.0 node_modules/grunt-jira
+��������� jira@0.9.2 (oauth@0.9.14, request@2.14.0)
+
+disc@1.3.2 node_modules/disc
+��������� builtins@0.0.3
+��������� flatten@0.0.1
+��������� opener@1.4.1
+��������� uniq@1.0.1
+��������� map-async@0.1.1
+��������� commondir@0.0.1
+��������� plucker@0.0.0
+��������� duplexer@0.1.1
+��������� through@2.3.8
+��������� file-tree@1.0.0 (async-reduce@0.0.1, flat@1.0.0)
+��������� optimist@0.6.1 (wordwrap@0.0.3, minimist@0.0.10)
+��������� stream-browserify@2.0.1 (inherits@2.0.1, readable-stream@2.0.5)
+��������� bl@0.7.0 (readable-stream@1.0.33)
+��������� d3@3.5.16
+��������� browser-unpack@0.2.3 (minimist@0.0.5, concat-stream@1.2.1, esprima-fb@3001.1.0-dev-harmony-fb)
+
+grunt@0.4.5 node_modules/grunt
+��������� which@1.0.9
+��������� dateformat@1.0.2-1.2.3
+��������� eventemitter2@0.4.14
+��������� getobject@0.1.0
+��������� rimraf@2.2.8
+��������� colors@0.6.2
+��������� async@0.1.22
+��������� grunt-legacy-util@0.2.0
+��������� nopt@1.0.10 (abbrev@1.0.7)
+��������� exit@0.1.2
+��������� hooker@0.2.3
+��������� minimatch@0.2.14 (sigmund@1.0.1, lru-cache@2.7.3)
+��������� glob@3.1.21 (inherits@1.0.2, graceful-fs@1.2.3)
+��������� lodash@0.9.2
+��������� coffee-script@1.3.3
+��������� underscore.string@2.2.1
+��������� iconv-lite@0.2.11
+��������� js-yaml@2.0.5 (argparse@0.1.16, esprima@1.0.4)
+��������� grunt-legacy-log@0.1.3 (grunt-legacy-log-utils@0.1.1, underscore.string@2.3.3, lodash@2.4.2)
+��������� findup-sync@0.1.3 (glob@3.2.11, lodash@2.4.2)
+
+jsdom@3.1.2 node_modules/jsdom
+��������� xmlhttprequest@1.8.0
+��������� xml-name-validator@1.0.0
+��������� browser-request@0.3.3
+��������� cssom@0.3.1
+��������� nwmatcher@1.3.7
+��������� parse5@1.5.1
+��������� acorn-globals@1.0.9 (acorn@2.7.0)
+��������� escodegen@1.8.0 (estraverse@1.9.3, esutils@2.0.2, optionator@0.8.1, esprima@2.7.2, source-map@0.2.0)
+��������� htmlparser2@3.9.0 (domelementtype@1.3.0, entities@1.1.1, domhandler@2.3.0, domutils@1.5.1, readable-stream@2.0.5)
+��������� contextify@0.1.15 (bindings@1.2.1, nan@2.2.0)
+��������� request@2.69.0 (is-typedarray@1.0.0, aws-sign2@0.6.0, forever-agent@0.6.1, caseless@0.11.0, stringstream@0.0.5, tunnel-agent@0.4.2, oauth-sign@0.8.1, isstream@0.1.2, json-stringify-safe@5.0.1, extend@3.0.0, combined-stream@1.0.5, node-uuid@1.4.7, qs@6.0.2, aws4@1.2.1, mime-types@2.1.10, form-data@1.0.0-rc3, tough-cookie@2.2.1, har-validator@2.0.6, http-signature@1.1.1, hawk@3.1.3, bl@1.0.3)
+��������� cssstyle@0.2.34
+��������� acorn@0.11.0
+
+grunt-contrib-less@1.0.1 node_modules/grunt-contrib-less
+��������� async@0.9.2
+��������� chalk@0.5.1 (ansi-styles@1.1.0, escape-string-regexp@1.0.4, supports-color@0.2.0, has-ansi@0.1.0, strip-ansi@0.3.0)
+��������� less@2.4.0 (graceful-fs@3.0.8, mime@1.3.4, image-size@0.3.5, promise@6.1.0, errno@0.1.4, mkdirp@0.5.1, source-map@0.2.0, request@2.69.0)
+
+istanbul@0.3.22 node_modules/istanbul
+��������� abbrev@1.0.7
+��������� once@1.3.3 (wrappy@1.0.1)
+��������� nopt@3.0.6
+��������� wordwrap@1.0.0
+��������� supports-color@3.1.2 (has-flag@1.0.0)
+��������� async@1.5.2
+��������� which@1.2.4 (isexe@1.1.2, is-absolute@0.1.7)
+��������� mkdirp@0.5.1 (minimist@0.0.8)
+��������� esprima@2.5.0
+��������� fileset@0.2.1 (minimatch@2.0.10)
+��������� resolve@1.1.7
+��������� js-yaml@3.5.3 (esprima@2.7.2, argparse@1.0.6)
+��������� escodegen@1.7.1 (estraverse@1.9.3, esutils@2.0.2, optionator@0.5.0, source-map@0.2.0, esprima@1.2.5)
+��������� handlebars@4.0.5 (source-map@0.4.4, optimist@0.6.1, uglify-js@2.6.1)
+
+grunt-dox@0.5.0 node_modules/grunt-dox
+��������� rimraf@2.5.2 (glob@7.0.0)
+��������� dox-foundation@0.5.6 (commander@1.2.0, walkdir@0.0.11, mkdirp@0.5.1, dox@0.4.6, stylus@0.33.1, jade@1.0.2)
+��������� dox@0.8.0 (commander@2.8.1, marked@0.3.5, jsdoctypeparser@1.2.0)
+
+grunt-contrib-jshint@0.11.3 node_modules/grunt-contrib-jshint
+��������� hooker@0.2.3
+��������� jshint@2.8.0 (strip-json-comments@1.0.4, console-browserify@1.1.0, exit@0.1.2, shelljs@0.3.0, minimatch@2.0.10, cli@0.6.6, htmlparser2@3.8.3, lodash@3.7.0)
+
+sinon@1.17.3 node_modules/sinon
+��������� formatio@1.1.1
+��������� samsam@1.1.2
+��������� lolex@1.3.2
+��������� util@0.10.3 (inherits@2.0.1)
+
+browserify@11.2.0 node_modules/browserify
+��������� https-browserify@0.0.1
+��������� htmlescape@1.1.0
+��������� tty-browserify@0.0.0
+��������� builtins@0.0.7
+��������� constants-browserify@0.0.1
+��������� path-browserify@0.0.0
+��������� os-browserify@0.1.2
+��������� isarray@0.0.1
+��������� inherits@2.0.1
+��������� commondir@0.0.1
+��������� string_decoder@0.10.31
+��������� process@0.11.2
+��������� browser-resolve@1.11.1
+��������� shell-quote@0.0.1
+��������� stream-browserify@2.0.1
+��������� defined@1.0.0
+��������� punycode@1.4.0
+��������� xtend@4.0.1
+��������� querystring-es3@0.2.1
+��������� assert@1.3.0
+��������� timers-browserify@1.4.2
+��������� domain-browser@1.1.7
+��������� deps-sort@1.3.9
+��������� parents@1.0.1 (path-platform@0.11.15)
+��������� vm-browserify@0.0.4 (indexof@0.0.1)
+��������� util@0.10.3
+��������� console-browserify@1.1.0 (date-now@0.1.4)
+��������� has@1.0.1 (function-bind@1.1.0)
+��������� events@1.0.2
+��������� subarg@1.0.0 (minimist@1.2.0)
+��������� shasum@1.0.2 (sha.js@2.4.4, json-stable-stringify@0.0.1)
+��������� url@0.10.3 (punycode@1.3.2, querystring@0.2.0)
+��������� readable-stream@2.0.5 (process-nextick-args@1.0.6, util-deprecate@1.0.2, core-util-is@1.0.2)
+��������� stream-http@1.7.1 (indexof@0.0.1, builtin-status-codes@1.0.0, foreach@2.0.5, object-keys@1.0.9)
+��������� concat-stream@1.4.10 (typedarray@0.0.6, readable-stream@1.1.13)
+��������� resolve@1.1.7
+��������� glob@4.5.3 (once@1.3.3, inflight@1.0.4, minimatch@2.0.10)
+��������� read-only-stream@1.1.1 (readable-wrap@1.0.0, readable-stream@1.1.13)
+��������� buffer@3.6.0 (isarray@1.0.0, ieee754@1.1.6, base64-js@0.0.8)
+��������� labeled-stream-splicer@1.0.2 (stream-splicer@1.3.2)
+��������� through2@1.1.1 (readable-stream@1.1.13)
+��������� browser-pack@5.0.1 (umd@3.0.1, combine-source-map@0.6.1)
+��������� duplexer2@0.0.2 (readable-stream@1.1.13)
+��������� JSONStream@1.0.7 (through@2.3.8, jsonparse@1.2.0)
+��������� syntax-error@1.1.5 (acorn@2.7.0)
+��������� module-deps@3.9.1 (readable-stream@1.1.13, stream-combiner2@1.0.2, detective@4.3.1)
+��������� crypto-browserify@3.11.0 (create-hmac@1.1.4, randombytes@2.0.2, pbkdf2@3.0.4, create-hash@1.1.2, browserify-cipher@1.0.0, create-ecdh@4.0.0, browserify-sign@4.0.0, public-encrypt@4.0.0, diffie-hellman@5.0.2)
+��������� browserify-zlib@0.1.4 (pako@0.2.8)
+��������� insert-module-globals@6.6.3 (is-buffer@1.1.2, combine-source-map@0.6.1, lexical-scope@1.2.0)
+
+grunt-plato@1.2.1 node_modules/grunt-plato
+��������� plato@1.2.2 (posix-getopt@1.0.0, fs-extra@0.3.2, escomplex-js@0.1.5, jshint@2.5.11)
+
+grunt-browserify@3.8.0 node_modules/grunt-browserify
+��������� async@0.9.2
+��������� resolve@1.1.7
+��������� lodash@3.10.1
+��������� watchify@3.7.0 (defined@1.0.0, xtend@4.0.1, outpipe@1.1.1, anymatch@1.3.0, chokidar@1.4.2, through2@2.0.1, browserify@13.0.0)
+��������� browserify@10.2.6 (https-browserify@0.0.1, htmlescape@1.1.0, tty-browserify@0.0.0, builtins@0.0.7, constants-browserify@0.0.1, path-browserify@0.0.0, os-browserify@0.1.2, isarray@0.0.1, inherits@2.0.1, string_decoder@0.10.31, through2@1.1.1, process@0.11.2, commondir@0.0.1, stream-browserify@1.0.0, browser-resolve@1.11.1, shell-quote@0.0.1, defined@1.0.0, punycode@1.4.0, xtend@4.0.1, duplexer2@0.0.2, querystring-es3@0.2.1, assert@1.3.0, timers-browserify@1.4.2, domain-browser@1.1.7, deps-sort@1.3.9, util@0.10.3, parents@1.0.1, concat-stream@1.4.10, events@1.0.2, read-only-stream@1.1.1, vm-browserify@0.0.4, console-browserify@1.1.0, has@1.0.1, subarg@1.0.0, http-browserify@1.7.0, shasum@1.0.2, readable-stream@1.1.13, url@0.10.3, labeled-stream-splicer@1.0.2, glob@4.5.3, buffer@3.6.0, browser-pack@5.0.1, JSONStream@1.0.7, syntax-error@1.1.5, insert-module-globals@6.6.3, browserify-zlib@0.1.4, crypto-browserify@3.11.0, module-deps@3.9.1)
+
+backbone-query-parameters@0.4.0 node_modules/backbone-query-parameters
+
+grunt-prompt@1.3.3 node_modules/grunt-prompt
+��������� inquirer@0.11.4 (strip-ansi@3.0.0, ansi-regex@2.0.0, figures@1.4.0, ansi-escapes@1.1.1, through@2.3.8, chalk@1.1.1, cli-width@1.1.1, cli-cursor@1.0.2, run-async@0.1.0, string-width@1.0.1, readline2@1.0.1, rx-lite@3.1.2)
+��������� lodash@3.10.1
+
+webdriverio@3.4.0 node_modules/webdriverio
+��������� array.from@0.2.0
+��������� supports-color@1.3.1
+��������� css-value@0.0.1
+��������� is-generator@1.0.2
+��������� co@4.6.0
+��������� deepmerge@0.2.10
+��������� rgb2hex@0.1.0
+��������� wgxpath@1.0.0
+��������� q@1.3.0
+��������� url@0.10.3 (punycode@1.3.2, querystring@0.2.0)
+��������� optimist@0.6.1 (wordwrap@0.0.3, minimist@0.0.10)
+��������� ejs@2.4.1
+��������� css-parse@2.0.0 (css@2.2.1)
+��������� request@2.49.0 (caseless@0.8.0, aws-sign2@0.5.0, forever-agent@0.5.2, stringstream@0.0.5, oauth-sign@0.5.0, tunnel-agent@0.4.2, json-stringify-safe@5.0.1, node-uuid@1.4.7, qs@2.3.3, mime-types@1.0.2, combined-stream@0.0.7, form-data@0.1.4, tough-cookie@2.2.1, http-signature@0.10.1, bl@0.9.5, hawk@1.1.1)
+��������� archiver@0.14.4 (buffer-crc32@0.2.5, lazystream@0.1.0, async@0.9.2, readable-stream@1.0.33, zip-stream@0.5.2, tar-stream@1.1.5, glob@4.3.5, lodash@3.2.0)
+��������� inquirer@0.8.5 (ansi-regex@1.1.1, figures@1.4.0, through@2.3.8, readline2@0.1.1, cli-width@1.1.1, chalk@1.1.1, rx@2.5.3, lodash@3.10.1)
+
+cucumber@0.9.5 node_modules/cucumber
+��������� callsite@1.0.0
+��������� colors@1.1.2
+��������� commander@2.9.0 (graceful-readlink@1.0.1)
+��������� stack-chain@1.3.6
+��������� camel-case@1.2.2 (upper-case@1.1.3, sentence-case@1.1.3)
+��������� cli-table@0.3.1 (colors@1.0.3)
+��������� glob@7.0.0 (path-is-absolute@1.0.0, inherits@2.0.1, once@1.3.3, inflight@1.0.4, minimatch@3.0.0)
+��������� cucumber-html@0.2.3
+��������� gherkin@2.12.2
+��������� duration@0.2.0 (d@0.1.1, es5-ext@0.10.11)
+��������� lodash@4.5.0
+
+grunt-jscs@1.8.0 node_modules/grunt-jscs
+��������� vow@0.4.12
+��������� hooker@0.2.3
+��������� jscs@1.13.1 (strip-json-comments@1.0.4, pathval@0.1.1, commander@2.6.0, estraverse@1.9.3, exit@0.1.2, chalk@1.0.0, lodash.assign@3.0.0, minimatch@2.0.10, cli-table@0.3.1, vow-fs@0.3.4, prompt@0.2.14, esprima-harmony-jscs@1.1.0-bin, esprima@1.2.5, xmlbuilder@2.6.5)
+
+grunt-jsdoc@0.5.8 node_modules/grunt-jsdoc
+��������� jsdoc@3.2.2 (js2xmlparser@0.1.0, crypto-browserify@0.1.1, marked@0.2.8, taffydb@2.6.2, async@0.1.22, wrench@1.3.9, catharsis@0.7.0, underscore@1.4.2, jshint@0.9.1)
+��������� ink-docstrap@0.4.12 (moment@2.6.0)
+
+grunt-selenium-webdriver@0.2.482 node_modules/grunt-selenium-webdriver
+��������� phantomjs@1.9.19 (which@1.0.9, progress@1.1.8, kew@0.4.0, md5@2.0.0, request-progress@0.3.1, adm-zip@0.4.4, npmconf@2.1.1, fs-extra@0.23.1, request@2.42.0)
+./dist/html/ does not seem to be available right now
+Running "normalizeBranchType" task
+
+Running "configureDeploy" task
+
+Running "getDeployVersion" task
+isReleaseBranch false
+useVersion false
+version develop
+
+Running "getDeployableFiles" task
+
+Running "exec:getDeployBranch" (exec) task
+
+Running "setCurrentFile:mainJs" (setCurrentFile) task
+
+Running "jira:searchClosedDeployTicket" (jira) task
+
+Running "incrementIfNeeded" task
+Build left at 2.4.22
+
+Running "unwrap:marionette" (unwrap) task
+>> ./tmp/backbone.marionette.js created.
+
+Running "handlebars:compile" (handlebars) task
+>> 1 file created.
+
+Running "jshint:all" (jshint) task
+>> 1090 files lint free.
+
+Running "jscs:all" (jscs) task
+>> 1090 files without code style errors.
+
+Running "mocha_istanbul:all" (mocha_istanbul) task
+
+
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������������������������������������������������������������������������������������������������������������������������������
+  ������������������������������������������������
+
+  2635 passing (11s)
+  13 pending
+
+=============================================================================
+Writing coverage object [/m2repos/workspaces/FED/fed.mobile/coverage/coverage.json]
+Writing coverage reports at [/m2repos/workspaces/FED/fed.mobile/coverage]
+=============================================================================
+
+=============================== Coverage summary ===============================
+Statements   : 84.37% ( 8803/10434 ), 8 ignored
+Branches     : 69.63% ( 1818/2611 ), 6 ignored
+Functions    : 83.9% ( 1990/2372 ), 2 ignored
+Lines        : 84.4% ( 8800/10426 )
+================================================================================
+>> Done. Minimum coverage threshold succeeded.
+
+Running "exec:checkoutDist" (exec) task
+
+
+If grunt pauses (but does not exit) and asks you to log into SVN, try to enter and submit your password.
+
+
+A    dist/html
+A    dist/html/MS_01_CONTAINER (DEFAULT).2.4.21.min.html
+A    dist/html/MS_01_CONTAINER (DEFAULT).2.4.15.min.html
+A    dist/html/MS_01_CONTAINER (DEFAULT).feature.listsfavorite.min.html
+A    dist/html/MS_01_CONTAINER (DEFAULT).2.4.16.min.html
+A    dist/html/MS_01_CONTAINER (DEFAULT).2.4.17.min.html
+A    dist/html/MS_01_CONTAINER (DEFAULT).2.4.18.min.html
+A    dist/html/MS_01_CONTAINER (DEFAULT).feature.ppqa.min.html
+A    dist/html/MS_01_CONTAINER (DEFAULT).2.4.19.min.html
+A    dist/html/MS_01_CONTAINER (DEFAULT).develop.min.html
+A    dist/html/MS_01_CONTAINER (DEFAULT).2.4.20.html
+A    dist/html/MS_01_CONTAINER (DEFAULT).2.4.21.html
+A    dist/html/MS_01_CONTAINER (DEFAULT).2.4.15.html
+A    dist/html/MS_01_CONTAINER (DEFAULT).feature.listsfavorite.html
+A    dist/html/MS_01_CONTAINER (DEFAULT).2.4.16.html
+A    dist/html/MS_01_CONTAINER (DEFAULT).2.4.17.html
+A    dist/html/MS_01_CONTAINER (DEFAULT).2.4.18.html
+A    dist/html/MS_01_CONTAINER (DEFAULT).2.4.19.html
+A    dist/html/MS_01_CONTAINER (DEFAULT).2.4.15.min.min.html
+A    dist/html/MS_01_CONTAINER (DEFAULT).feature.ppqa.html
+A    dist/html/MS_01_CONTAINER (DEFAULT).2.4.16.min.min.html
+A    dist/html/MS_01_CONTAINER (DEFAULT).develop.html
+A    dist/html/MS_01_CONTAINER (DEFAULT).develop.min.min.html
+A    dist/html/MS_01_CONTAINER (DEFAULT).2.4.20.min.html
+A    dist/css
+A    dist/css/mws-app.2.4.20.min.css
+A    dist/css/mws-app.2.4.21.min.css
+A    dist/css/mws-app.2.4.15.min.css
+A    dist/css/mws-app.2.4.16.min.css
+A    dist/css/mws-app.2.4.17.min.css
+A    dist/css/mws-app.2.4.18.min.css
+A    dist/css/mws-app.2.4.20.css
+A    dist/css/mws-app.2.4.21.css
+A    dist/css/mws-app.2.4.15.css
+A    dist/css/mws-app.2.4.16.css
+A    dist/css/mws-app.feature.listsfavorite.css
+A    dist/css/mws-app.2.4.17.css
+A    dist/css/mws-app.2.4.18.css
+A    dist/css/mws-app.2.4.19.css
+A    dist/css/mws-app.feature.ppqa.css
+A    dist/css/mws-app.develop.css
+A    dist/js
+A    dist/js/sitewide
+A    dist/js/sitewide/mws-app.2.4.20.js
+A    dist/js/sitewide/mws-app.2.4.21.js
+A    dist/js/sitewide/mws-app.2.4.15.js
+A    dist/js/sitewide/mws-app.2.4.16.js
+A    dist/js/sitewide/mws-app.feature.listsfavorite.js
+A    dist/js/sitewide/mws-app.2.4.17.js
+A    dist/js/sitewide/mws-app.2.4.18.js
+A    dist/js/sitewide/mws-app.feature.ppqa.js
+A    dist/js/sitewide/mws-app.2.4.19.js
+A    dist/js/sitewide/mws-app.develop.js
+A    dist/js/sitewide/mws-app.2.4.20.min.js
+A    dist/js/sitewide/mws-app.2.4.21.min.js
+A    dist/js/sitewide/mws-app.2.4.15.min.js
+A    dist/js/sitewide/mws-app.2.4.16.min.js
+A    dist/js/sitewide/mws-app.2.4.17.min.js
+A    dist/js/sitewide/mws-app.2.4.18.min.js
+A    dist/js/sitewide/mws-app.2.4.19.min.js
+A    dist/md5-history.json
+Checked out revision 18005.
+
+Running "less:prod" (less) task
+File tmp/mws-app-less.css created
+
+Running "concat:cssProd" (concat) task
+File tmp/mws-app.css created.
+
+Running "cssmin:prod" (cssmin) task
+File dist/css/mws-app.develop.css created: 154.86 kB ��� 131.39 kB
+
+Running "browserify:js" (browserify) task
+>> Bundle tmp/mws-app.js created.
+
+Running "strip_code:buildApp" (strip_code) task
+Stripped code from tmp/mws-app.js and saved to tmp/mws-app.js
+
+Running "uglify:buildApp" (uglify) task
+File dist/js/sitewide/mws-app.develop.js created: 2.2 MB ��� 1.07 MB
+
+Running "copy:css" (copy) task
+Copied 1 files
+
+Running "copy:js" (copy) task
+Copied 1 files
+
+Running "configureDeploy" task
+
+Running "getDeployVersion" task
+isReleaseBranch false
+useVersion false
+version develop
+
+Running "getDeployableFiles" task
+
+Running "exec:getDeployBranch" (exec) task
+
+Running "deleteDuplicateMd5Assets" task
+
+Running "json_massager:saveVersions" (json_massager) task
+>> JSON file "dist/md5-history.json" modified and written to
+>> "dist/md5-history.json".
+
+Running "normalizeBranchType" task
+
+Running "configureDeploy" task
+
+Running "getDeployVersion" task
+isReleaseBranch false
+useVersion false
+version develop
+
+Running "getDeployableFiles" task
+
+Running "exec:getDeployBranch" (exec) task
+
+Running "clean:static" (clean) task
+>> 1 path cleaned.
+
+Running "compile-handlebars:container" (compile-handlebars) task
+
+Running "htmlmin:prod" (htmlmin) task
+Minified 10 files
+
+Running "regex-replace:otagQuotes" (regex-replace) task
+1 action(s) completed.
+File 'dist/html/MS_01_CONTAINER (DEFAULT).develop.min.html' replace complete.
+
+Running "deploy" task
+
+Running "setCurrentFile:mainJs" (setCurrentFile) task
+
+Running "jira:searchOpenDeployTicket" (jira) task
+
+Running "configureDeployTicketSubmission" task
+
+Running "submitDeployTicket" task
+
+Running "jira:updateDeployTicket" (jira) task
+
+Running "recordTicketKey" task
+
+Running "linkTicketsIfOverarching" task
+
+Running "setCurrentFile:mainCss" (setCurrentFile) task
+
+Running "jira:searchOpenDeployTicket" (jira) task
+
+Running "configureDeployTicketSubmission" task
+
+Running "submitDeployTicket" task
+
+Running "jira:updateDeployTicket" (jira) task
+
+Running "recordTicketKey" task
+
+Running "linkTicketsIfOverarching" task
+
+Running "setCurrentFile:mainHtml" (setCurrentFile) task
+
+Running "configureDeployTicketSubmission" task
+
+Running "updateSiteElement" task
+Currently building RC: false
+No existing RC: true
+Status warrants publish (no-change): false
+Try to publish MS_01_CONTAINER (DEFAULT).develop.html? false
+
+Running "json_massager:saveVersions" (json_massager) task
+>> JSON file "dist/md5-history.json" modified and written to
+>> "dist/md5-history.json".
+
+Running "exec:commit" (exec) task
+At revision 18005.
+Sending        css/mws-app.develop.css
+Sending        html/MS_01_CONTAINER (DEFAULT).2.4.21.min.html
+Sending        html/MS_01_CONTAINER (DEFAULT).develop.html
+Sending        html/MS_01_CONTAINER (DEFAULT).develop.min.html
+Sending        js/sitewide/mws-app.develop.js
+Sending        md5-history.json
+Transmitting file data ......
+Committed revision 18006.
+
+Running "reportDeployTicketStatuses" task
+>> mws-app.develop.js was submitted for update (FM-1880)
+>> mws-app.develop.css was submitted for update (FM-1879)
+>> MS_01_CONTAINER (DEFAULT).develop.html is up-to-date
+
+Done, without errors.
+
+
+Execution Time (2016-02-18 20:43:46 UTC)
+handlebars:compile        1.3s  ��� 1%
+jshint:all               25.7s  ��������������������������� 24%
+jscs:all                  8.9s  ������������ 8%
+mocha_istanbul:all       33.1s  ������������������������������������ 31%
+exec:checkoutDist         4.8s  ������ 4%
+browserify:js             8.9s  ������������ 8%
+uglify:buildApp          11.4s  ������������ 11%
+jira:updateDeployTicket   3.7s  ������ 3%
+jira:updateDeployTicket   2.1s  ��� 2%
+exec:commit               2.6s  ��� 2%
+Total 1m 48s
+
+[4mRunning "exec:stashSuccess" (exec) task[24m
+[31m>> [39m% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current[31m
+>> [39m                                 Dload  Upload   Total   Spent
+ok[31m>> [39mLeft  Speed[31m
+>> [39m
+  0     2    0     2    0     0      2      0 --:--:-- --:--:-- --:--:--     2
+  0     2    0     2    0     0      2      0 --:--:-- --:--:-- --:--:--     0
+
+[32mDone, without errors.[39m
+
+
+Execution Time (2016-02-18 20:45:37 UTC)
+loading tasks      366ms  ��������������������������������� 25%
+exec:stashSuccess   1.1s  ��������������������������������������������������������������������������������������������������� 75%
+Total 1.5s
+
++ '[' -f 'node_modules/webdriverio/node_modules/archiver/node_modules/file-utils/node_modules/isbinaryfile/tests/fixtures/03_???????????_??_????????????.rst' ']'
+Failed to notify Stash for commit 25f0f00a9b4acb3f0f2b0d6de79fd246151c76b4 ({"errors":[{"context":null,"message":"You are not permitted to access this resource","exceptionName":"com.atlassian.stash.exception.AuthorisationException"}]})
+[INFO]
+[INFO] -----------------------------------------------------
+[INFO] Global Post Script
+[INFO] -----------------------------------------------------
+
+[INFO] -----------------------------------------------------
+Preparing to release any desktopdb locks acquired for this build if desktopdb is enabled...
+Lock(s) released successfully
+Finished: SUCCESS

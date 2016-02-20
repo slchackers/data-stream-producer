@@ -13,5 +13,27 @@ app.get('/', function(req, res) {
     res.send('SLCH Awwww yisss!');
 });
 
+app.get('/test', function(req, res){
+    // this is just using standard HTTP 1.1 chunking
+    res.write('<html><head>');
+    // res.write(... css and js tags if we care)
+    res.write('<body>');
+    res.write('<h1>Streaming test</h1>');
+    // fetch data and write main body of page
+    // with more res.write('...') calls
+    writeChunkedResponse(res);
+    // res.end('</body></html>');
+});
+
+function readRandomLinesFromFile(fileName) {
+    return 'foo<br>';
+}
+
+function writeChunkedResponse(res) {
+    setInterval(function() {
+        res.write(readRandomLinesFromFile());
+    } , 1000);
+}
+
 app.listen(SERVER_PORT);
 console.log(" 💻   App server running on port", SERVER_PORT);
