@@ -1,0 +1,29 @@
+{
+  "name": "data-stream-producer",
+  "version": "1.0.0",
+  "description": "Data producer for client template testing",
+  "main": "server/app.js",
+  "dependencies": {
+    "express": "^4.13.4",
+    "express-partials": "^0.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slchackers/data-stream-producer.git"
+  },
+  "keywords": [
+    "Async",
+    "Stream"
+  ],
+  "author": "Jim Wharton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/slchackers/data-stream-producer/issues"
+  },
+  "homepage": "https://github.com/slchackers/data-stream-producer#readme"
+}
