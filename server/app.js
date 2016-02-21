@@ -3,6 +3,7 @@ var SERVER_PORT = 5000;
 var express = require('express');
 var app = express();
 var partials = require('express-partials');
+var fs = require('fs');
 
 // app config
 app.use(express.static(__dirname + '/static'));
@@ -13,7 +14,12 @@ app.get('/', function(req, res) {
     res.send('SLCH Awwww yisss!');
 });
 
-app.get('/test', function(req, res){
+app.get('/stream', function(req, res) {
+    var stream = fs.createReadStream('./server/static.txt');
+    stream.pipe(res);
+});
+
+app.get('/chunk', function(req, res){
     // this is just using standard HTTP 1.1 chunking
     res.write('<html><head>');
     // res.write(... css and js tags if we care)
